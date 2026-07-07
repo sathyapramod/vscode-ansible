@@ -426,6 +426,9 @@ const foldedMultilineReducer = (
   currentIndex: number,
   array: string[],
 ): string => {
+  if (currentIndex === 0) {
+    return currentValue;
+  }
   if (
     currentValue === "" ||
     currentValue.match(/^\s/) ||
